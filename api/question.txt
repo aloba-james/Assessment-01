@@ -1,0 +1,60 @@
+Python Coding Task — Build a Simple Library API
+You have 50 minutes to build a simple Library API where users can borrow books.
+Please use a Python backend framework — such as Flask, FastAPI, or Django.
+(You must use Python — not Node.js or another language.)
+1. Add a Book
+Endpoint: POST /books
+ Input (JSON):
+{ "title": "Book Title", "author": "Book Author" }
+
+Output: The created book object with an auto-generated id.
+2. Register a User
+Endpoint: POST /users
+Input (JSON):
+{ "name": "Alice" }
+
+Output: The created user object with an auto-generated id.
+3. Borrow a Book
+Endpoint: POST /borrow
+Input (JSON):
+{ "userId": 1, "bookId": 2 }
+
+Rules:
+A book can only be borrowed if it’s not already borrowed.
+ Output: A confirmation message like:
+ {"message": "Book borrowed successfully"}
+
+
+4. List Borrowed Books by User
+Endpoint: GET /users/:id/borrowed
+Output: A list of all books borrowed by that user.
+What We’re Looking For
+Clear, correct implementation of the above rules.
+
+
+Code that runs without errors.
+
+
+Simple, readable structure.
+
+
+Ability to explain your decisions.
+
+
+Notes
+Use in-memory storage (e.g., Python lists or dictionaries).
+
+
+No database setup required.
+
+
+If you finish early, you can add extras like:
+
+
+Returning a book
+
+
+Input validation and error messages
+
+
+Preventing invalid user/book IDs
